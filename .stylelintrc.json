@@ -6,6 +6,10 @@
     "rules": {
       "block-no-empty": true, 
       "color-no-invalid-hex": true,      
-      "selector-max-id": 0 
+      "selector-max-id": 0,
+      "custom-property-pattern": null,
+      "value-keyword-case": "lower",
+      "selector-class-pattern": "^([a-z0-9-_]+)$",
+      "property-no-vendor-prefix": null     
     }
   }
