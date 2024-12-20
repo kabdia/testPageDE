@@ -1,0 +1,100 @@
+.main__info {
+    width: 100%;   
+}
+
+.info__container {
+    margin: 22.5rem 17.5%;
+    position: relative;
+
+    &_title {
+        --maxWidthTitle: 45rem;
+
+        position: absolute;
+        top:0;
+        left:0;
+        max-width: var(--maxWidthTitle);
+        font-family: gilroy, sans-serif;
+        font-size: 4.5rem;
+        line-height: 5.8rem;
+        letter-spacing: 5%;
+        color: var(--colorLapisLazuli);
+        margin: 0;
+    }
+
+    &__items {
+        --gapCards: 12.5rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: var(--gapCards);
+    }
+}
+.items__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapCards);
+}
+.items__item {
+    --widthCard: 45rem;    
+    --paddingCard: 6rem;
+
+    width: var(--widthCard);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--paddingCard);
+    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+    border-radius: 1.25rem;
+    border: none;
+    box-sizing: border-box;
+    
+    &_icon {
+        margin-bottom: 3rem;
+        
+    }
+    &_title {
+        margin-bottom: -2rem;
+    }
+    &_title-style {
+        font-family: gilroy, sans-serif;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        letter-spacing: 5%;
+        color: var(--colorYaleBlue);
+    } 
+
+    &_text {
+        font-family: gilroy, sans-serif;
+        font-size: 2rem;
+        line-height: 3.25rem;        
+        color: var(--colorYaleBlue);
+        opacity: 60%;
+    }
+
+    &_more {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        font-family: gilroy, sans-serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 3.75rem;
+        color: var(--colorBlueGray); 
+        cursor: pointer;      
+    }
+}
+
+.img-card1 {
+    margin-left: -6rem;
+}
+.img-card2 {
+    margin-top: - 70px;    
+}
+.img-card3 {
+    margin-left: -6rem;
+}
