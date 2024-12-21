@@ -1,0 +1,14 @@
+.footer {
+    width: 100%;    
+    background-color: var(--colorBlueGray);
+     
+    &__container {
+        width: 95%;        
+        background-color: var(--colorLapisLazuli);
+        border-top-right-radius: 25rem;
+
+        &_block {
+            width:85%;            
+        }
+    }
+}

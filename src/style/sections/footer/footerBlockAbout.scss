@@ -1,0 +1,91 @@
+.block__about {
+    display: flex;
+    justify-content: space-between;
+    gap: 12.5rem;
+    padding: 12rem 0 0 21.5%;
+}
+
+.block__about__contacts {
+    &_logo {
+        display: flex;
+        align-items: center;
+        gap: 1.9rem;
+
+        &-title {
+            font-family: var(--fontFamilyGilroy);
+            font-size: 3.5rem;
+            line-height: 5.75rem;
+            color: var(--colorWhite);
+            letter-spacing: 1px;
+        }
+    }
+
+    &_contact {
+        display: grid;
+        column-gap: 2rem;        
+        grid-template-columns: 2.4rem 33rem;        
+
+        &-style {
+            font-family: var(--fontFamilyGilroy);
+            font-size: 2rem;
+            line-height: 3.35rem;
+            color: var(--colorWhite);
+            letter-spacing: 1px;
+        }
+        &-style:nth-child(odd) {
+            font-weight: 800;
+        }
+    }   
+}
+
+.about__contacts__container {
+    display: flex;
+    gap: 9.6rem;
+}
+.about__contacts__about {
+
+    &-title {
+        font-family: var(--fontFamilyGilroy);
+        font-size: 2.5rem;
+        line-height: 6rem;
+        letter-spacing: 1px;
+        color: var(--colorWhite);
+    }
+    &-items {
+        list-style-type: none;
+        padding: 0;
+
+        &-item {
+            font-family: var(--fontFamilyGilroy);
+            font-size: 2rem;
+            line-height: 3.25rem;
+            letter-spacing: 1px;
+            color: var(--colorWhite);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.about__contacts__follow {
+
+    &-title {
+        font-family: var(--fontFamilyGilroy);
+        font-size: 2.5rem;
+        line-height: 6rem;
+        letter-spacing: 1px;
+        color: var(--colorWhite);
+    }
+    &-items {
+        list-style-type: none;
+        padding: 0;
+
+        &-item {
+            font-family: var(--fontFamilyGilroy);
+            font-size: 2rem;
+            line-height: 3.25rem;
+            letter-spacing: 1px;
+            color: var(--colorWhite);
+            margin-bottom: 2rem;
+        }
+    }
+}

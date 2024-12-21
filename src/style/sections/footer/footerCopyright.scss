@@ -1,0 +1,16 @@
+.footer__copyright {
+    width: 100%;
+
+    &-style {
+        font-family: var(--fontFamilyGilroy);
+        font-size: 2rem;
+        line-height: 3.25rem;
+        letter-spacing: 1px;
+        color: var(--colorWhite);
+        opacity: .4;        
+        margin-left: 18%;
+        margin-top: 5rem;
+        margin-bottom: 0;
+        padding-bottom: 8rem;
+    }
+}

@@ -68,29 +68,9 @@ body {
         opacity: 60%;
     }
     &_btn {
-        --widthBtn: 28rem;
-        --heightBtn: 7rem;
-        --borderRadius: 1.3rem;
-
-        background-color: var(--colorBlueGray);        
-        width: var(--widthBtn);
-        height: var(--heightBtn);
-        border-radius: var(--borderRadius);
-        border: none;
-        box-shadow: 5px 10px 20px 5px rgba(53, 110, 173, 0.2);
-        
-        cursor: pointer;
+        background-color: var(--colorBlueGray);       
+        box-shadow: 5px 10px 20px 5px rgba(53, 110, 173, 0.2);       
     }
-}
-
-.btn-text {
-    font-family: gilroy, sans-serif;
-    font-size: 2rem;
-    line-height: 3rem;
-    letter-spacing: 4%;
-    text-align: center;
-    text-decoration: none;
-    color: var(--colorWhite);
 }
 
 .description__image {
