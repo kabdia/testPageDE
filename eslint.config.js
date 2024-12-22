@@ -8,6 +8,12 @@ export default [
            "no-unused-vars": "warn",
            "no-undef": "warn",
            "semi": ["error", "always"]
-       }
+       },
+       
+       "env": {
+        "browser": true,
+        "node": false
+        }
+    
    }
 ];

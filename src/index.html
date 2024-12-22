@@ -132,8 +132,8 @@
               <p class="block__connection_description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             <div class="block__connection__button">
-              <button class="block__connection__button_btn btn_style">
-                <a class="button_btn-link btn-text" href="#">Let’s Talk</a>
+              <button id="openerWindowModal" data-open-modal="open" class="block__connection__button_btn btn_style">
+                <span class="button_btn-link btn-text">Let’s Talk</span>
               </button>
             </div>
           </section>
@@ -179,6 +179,48 @@
         </div>      
       </div>
     </footer>
+    <div class="modal" id="modalWindow" data-close-modal="close">
+      <div class="modal__container">
+        <img class="modal__container-close close_modal" src="./img/modal/close.svg" data-close-modal="close" alt="close" id="btnCloseModal">
+        <div class="modal__container__form" id="formContainer">
+          <h3 class="form-title">SEND US MESSAGE</h3>
+          <form class="form" data-js-form=
+          '{"url": "/submit-form",
+          "method": "POST",
+          "showModalAfterSuccess": "#messageSuccess",
+          "preventDefault": "true",
+          "showModalAfterError": "#messageSuccess",
+          "isNeedValidateBeforeSend": true}'>            
+            <div class="form-group">
+              <label for="name" class="form-name">Full name</label>
+              <input type="text" data-js-required="name" data-js-required-mode="blur, change" placeholder="Your Name" class="form-input">
+              <div class="form-error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="mail" class="form-name">Email</label>
+              <input type="text" data-js-required="mail" data-js-required-mode="blur, change" placeholder="Your Email" class="form-input">
+              <div class="form-error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-name">Message</label>
+              <textarea type="text" data-js-required="message" data-js-required-mode="blur, change" placeholder="Your Message" class="form-textarea"></textarea>
+              <div class="form-error-message"></div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-btn btn_style"><span class="btn-text">SUBMIT</span></button>
+          </div>
+          </form>
+        </div>
+        <div class="modal__info" id="messageSuccess" data-close-modal="close">
+          <div class="modal__info__container">
+            <img class="modal__info-close close_modal" src="./img/modal/close.svg" data-close-modal="close" alt="close" id="btnCloseModalSuccess">        
+          </div>
+          <div class="modal__info_message" id="messageSuccessText">
+    
+          </div>
+        </div>
+      </div>
+    </div>    
     <script type="module" src="./js/utils/main.js"></script>
   </body>
 </html>
