@@ -72,3 +72,18 @@
     }
 }
 
+@media screen and (max-width: 928px) {
+    .clients__container {
+
+        &_description {
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+          
+        &_logos {                  
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 16rem);                            
+        }         
+    }    
+}
+

@@ -7,10 +7,10 @@ import { isDomReady } from './isDomReady.js';
 import './style.js';
 
 isDomReady().then(() => {    
-    new ScrollLockManager()
-    new ModalManager()
-    new FormValidator()
-    new FormSendHandler()
+    new ScrollLockManager();
+    new ModalManager();
+    new FormValidator();
+    new FormSendHandler();
 });
 
 

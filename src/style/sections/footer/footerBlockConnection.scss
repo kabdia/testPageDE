@@ -15,7 +15,8 @@
             font-size: 4.5rem;
             line-height: 5.75rem;
             color: var(--colorWhite);
-            width: 40rem;
+            max-width: 40rem;
+            
         }
 
         &-text {
@@ -40,3 +41,36 @@
     }
 }
 
+@media screen and (max-width: 1044px) {   
+    .block__connection {
+        flex-wrap: wrap;
+    }    
+}
+@media screen and (max-width: 593px) {
+    .block__connection {
+       
+        &_description {
+           
+            &-title {
+                font-family: var(--fontFamilyGilroy);
+                font-size: 4.5rem;
+                line-height: 5.75rem;
+                color: var(--colorWhite);
+                max-width: 30rem;
+                
+            }
+    
+            &-text {
+                --widthTextFooter: 35rem;
+    
+                font-family: var(--fontFamilyGilroy);
+                font-size: 2rem;
+                line-height: 3.25rem;
+                color: var(--colorWhite);
+                opacity: .6;
+                max-width: var(--widthTextFooter);
+                width:var(--widthTextFooter);
+            }
+        }
+    }
+}

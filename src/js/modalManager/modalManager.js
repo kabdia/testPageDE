@@ -12,7 +12,7 @@ export class ModalManager {
     static attrs = {
         openModal: 'data-open-modal',
         closeModal: 'data-close-modal'
-    }
+    };
     
     constructor() {
       if (ModalManager.instance) {
@@ -46,7 +46,7 @@ export class ModalManager {
                 ModalManager.close({ mode: 'formBlock', datas: '#messageSuccess' });
                 ModalManager.close({ mode: 'formBlock', datas: '#btnCloseModalSuccess' });
             }
-        })
+        });
     }
     
     static open({ mode, datas, text }) {

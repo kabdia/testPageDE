@@ -100,6 +100,11 @@
         color: var(--placeholderInputModal);
         font-size: 2rem;
     }
+    &-error-message {        
+        font-size: 1.5rem;
+        font-family: var(--fontFamilyGilroy);
+        color: var(--colorRed);
+    }
 
     &-btn {
         background-color: var(--colorBlueGray);       
@@ -123,7 +128,7 @@
         padding-top: 20%;        
         font-size: 5rem;
         font-family: var(--fontFamilyGilroy);
-        text-align: center;
+        text-align: center;        
     }
 }
 .modal--active {

@@ -22,7 +22,7 @@ export class FormValidator {
     init(formSelector) {
         
       this.form = document.querySelector(formSelector);        
-      this.form.addEventListener('submit', (e) => this.handleSubmit(e));//эта функция будет в обработчике в другом файле
+      this.form.addEventListener('submit', (e) => this.handleSubmit(e));
       this.addEventListenersToFields();
     }
   
@@ -43,9 +43,7 @@ export class FormValidator {
       });
     }
     
-    handleSubmit(e) {
-       
-  
+    handleSubmit() { 
       const isValid = this.validateForm();  
       return isValid;
     }  
@@ -59,7 +57,7 @@ export class FormValidator {
           isValid = false;
         }
       });
-      console.log(isValid)
+      
       return isValid;
     }
 
@@ -71,7 +69,7 @@ export class FormValidator {
     switch (input.dataset.jsRequired) {
         case 'name': {
             if (input.value === '') {
-                errorMessage.innerHTML = 'This field is required.'
+                errorMessage.innerHTML = 'This field is required.';
                 isValid = false;
             }  else {
                 errorMessage.innerHTML = '';
@@ -82,7 +80,7 @@ export class FormValidator {
                 errorMessage.innerHTML = 'This field is required.';
                 isValid = false;
             } else {
-                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
                 if (!emailRegex.test(input.value)) {
                     errorMessage.textContent = 'Неверный формат email.';                    
                     isValid = false;

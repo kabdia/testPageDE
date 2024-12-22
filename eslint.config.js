@@ -1,19 +1,19 @@
 import js from "@eslint/js";
 
 export default [
-    js.configs.recommended,
+  js.configs.recommended,
 
-   {
-       rules: {
-           "no-unused-vars": "warn",
-           "no-undef": "warn",
-           "semi": ["error", "always"]
-       },
-       
-       "env": {
-        "browser": true,
-        "node": false
-        }
-    
-   }
+  {
+    languageOptions: {
+      globals: {
+        document: 'readonly',
+        __dirname: 'readonly',
+        browser: 'readonly', 
+        es2021: 'readonly',
+      },
+    },
+    rules: {
+      semi: ['error', 'always'], 
+    },
+  },
 ];

@@ -18,13 +18,13 @@ export class FormSendHandler {
   
     static getInstance() {
       if (!FormSendHandler.instance) {
-        FormSendHandler.instance = new FormHandler();
+        FormSendHandler.instance = new FormSendHandler();
       }
       return FormSendHandler.instance;
     }
   
     #handleSubmit(e) {
-      const { target, submitter } = e;
+      const { target } = e;
       if (!target.hasAttribute(`${this.attrs.form}`)) return;
       if (!target.tagName.toLowerCase() === "form") return;
       const cfg = JSON.parse(target.getAttribute(this.attrs.form));
@@ -40,20 +40,12 @@ export class FormSendHandler {
       if (preventDefault) {
         e.preventDefault();
       }
-      submitter.disabled = true;
+      
       
       if (isNeedValidateBeforeSend) {        
         const resValidate = FormValidator.getInstance().validateForm(target);
-        if (!resValidate) {            
-            if (showModalAfterError) {
-                ModalManager.open({
-                mode: 'sucessBlock', 
-                datas: '#messageSuccess', 
-                text: 'There was an error sending your message.',
-                });
-            }
-            return;
-                      
+        if (!resValidate) {           
+            return;                     
         }
       }
      
@@ -61,8 +53,7 @@ export class FormSendHandler {
         method,
         body: data,
       })
-      .then((res) => {
-        // Если ответ успешный, показываем модальное окно успеха
+      .then((res) => {        
         if (showModalAfterSuccess) {
           ModalManager.open({ 
             mode: 'sucessBlock', 
@@ -73,23 +64,12 @@ export class FormSendHandler {
         
       })
       .catch((error) => {       
-        console.error(error);      
         
-        if (showModalAfterError) {
-          ModalManager.open({
-            mode: 'sucessBlock', 
-            datas: '#messageSuccessText',  
-            text: 'There was an error sending your message.'
-          });
-        }
-      })
-      .finally(() => {
-        submitter.disabled = false;
       });
+      
     }
   
     #bindEvents() {
-        console.log('Binding events...');
       document.addEventListener(
         "submit",
         (e) => {

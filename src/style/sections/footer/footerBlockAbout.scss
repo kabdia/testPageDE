@@ -89,3 +89,21 @@
         }
     }
 }
+
+@media screen and (max-width: 1044px) {   
+    
+    .block__about {
+        gap: 3rem;
+    }
+    .about__contacts__container {
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width: 668px) {   
+    
+    .block__about {
+        flex-wrap: wrap;
+    }
+}
+
