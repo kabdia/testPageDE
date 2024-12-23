@@ -33,8 +33,7 @@ export class FormSendHandler {
         method = "POST",
         showModalAfterSuccess,
         preventDefault = true,        
-        isNeedValidateBeforeSend,
-        showModalAfterError
+        isNeedValidateBeforeSend,       
       } = cfg;
       const data = new FormData(target);
       if (preventDefault) {
@@ -53,18 +52,16 @@ export class FormSendHandler {
         method,
         body: data,
       })
-      .then((res) => {        
-        if (showModalAfterSuccess) {
-          ModalManager.open({ 
-            mode: 'sucessBlock', 
-            datas: '#messageSuccess', 
-            text: 'Your message successfully sent' 
-          });
-        }     
-        
-      })
-      .catch((error) => {       
-        
+      .then((res) => {   
+        if (res) {
+          if (showModalAfterSuccess) {
+            ModalManager.open({ 
+              mode: 'sucessBlock', 
+              datas: '#messageSuccess', 
+              text: 'Your message successfully sent' 
+            });
+          }     
+        }         
       });
       
     }

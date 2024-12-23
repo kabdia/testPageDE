@@ -5,15 +5,19 @@ export default [
 
   {
     languageOptions: {
-      globals: {
+      
+      globals: {        
         document: 'readonly',
         __dirname: 'readonly',
-        browser: 'readonly', 
+        "browser": true, 
         es2021: 'readonly',
+        "FormData": "readonly"
       },
     },
+    ignores: ['dist/**', 'build/**', 'node_modules/**'],
     rules: {
       semi: ['error', 'always'], 
     },
+      
   },
 ];

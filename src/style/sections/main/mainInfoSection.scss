@@ -15,8 +15,7 @@
         max-width: var(--maxWidthTitle);
         font-family: gilroy, sans-serif;
         font-size: 4.5rem;
-        line-height: 5.8rem;
-        letter-spacing: 5%;
+        line-height: 5.8rem;        
         color: var(--colorLapisLazuli);
         margin: 0;
     }
@@ -30,41 +29,44 @@
         gap: var(--gapCards);
     }
 }
+
 .items__container {
     display: flex;    
     flex-direction: column;
     gap: var(--gapCards);
     
 }
+
 .items__item {
     --widthCard: 45rem;    
     --paddingCard: 6rem;
 
     max-width: var(--widthCard);
-    width: 100%;
-    
+    width: 100%;    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: var(--paddingCard);
-    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+    box-shadow: var(--shadowCardsInfoMain);
     border-radius: 1.25rem;
     border: none;
     box-sizing: border-box;
+    transform: translateY(0);    
+    transition: box-shadow 1s linear, transform 1s linear;    
     
     &_icon {
-        margin-bottom: 3rem;
-        
+        margin-bottom: 3rem;        
     }
+
     &_title {
         margin-bottom: -2rem;
     }
+
     &_title-style {
         font-family: gilroy, sans-serif;
         font-size: 2.5rem;
-        line-height: 3.8rem;
-        letter-spacing: 5%;
+        line-height: 3.8rem;        
         color: var(--colorYaleBlue);
     } 
 
@@ -91,12 +93,19 @@
     }
 }
 
+.items__item:hover {
+    box-shadow: var(--shadowCardsInfoMainHover);
+    transform: translateY(-2.5rem);
+}
+
 .img-card1 {
     margin-left: -6rem;
 }
+
 .img-card2 {
     margin-top: - 70px;    
 }
+
 .img-card3 {
     margin-left: -6rem;
 }

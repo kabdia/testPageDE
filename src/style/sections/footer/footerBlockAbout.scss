@@ -32,6 +32,12 @@
             color: var(--colorWhite);
             letter-spacing: 1px;
         }
+
+        &-style a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         &-style:nth-child(odd) {
             font-weight: 800;
         }
@@ -42,8 +48,8 @@
     display: flex;
     gap: 9.6rem;
 }
-.about__contacts__about {
 
+.about__contacts__about {
     &-title {
         font-family: var(--fontFamilyGilroy);
         font-size: 2.5rem;
@@ -51,6 +57,7 @@
         letter-spacing: 1px;
         color: var(--colorWhite);
     }
+
     &-items {
         list-style-type: none;
         padding: 0;
@@ -62,12 +69,21 @@
             letter-spacing: 1px;
             color: var(--colorWhite);
             margin-bottom: 2rem;
+        }
+
+        &-item a {
+            text-decoration: none;
+            color: inherit;
+            transition: color .5s linear;
+        }
+
+        &-item a:hover {
+            color: var(--colorJordyBlue);
         }
     }
 }
 
 .about__contacts__follow {
-
     &-title {
         font-family: var(--fontFamilyGilroy);
         font-size: 2.5rem;
@@ -75,6 +91,7 @@
         letter-spacing: 1px;
         color: var(--colorWhite);
     }
+
     &-items {
         list-style-type: none;
         padding: 0;
@@ -87,23 +104,44 @@
             color: var(--colorWhite);
             margin-bottom: 2rem;
         }
+
+        &-item a {
+            text-decoration: none;
+            color: inherit;
+            transition: color .5s linear;
+        }
+
+        &-item a:hover {
+            color: var(--colorJordyBlue);
+        }
     }
 }
 
-@media screen and (max-width: 1044px) {   
-    
+@media screen and (max-width: 1044px) {    
     .block__about {
         gap: 3rem;
     }
+
     .about__contacts__container {
         flex-wrap: wrap;
-    }
-    
+    }    
 }
+
 @media screen and (max-width: 668px) {   
-    
     .block__about {
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 468px) {   
+    .block__about__contacts {     
+        &_contact {                 
+            grid-template-columns: 2.4rem 25rem;  
+        }       
+    }
+    
+    .about__contacts__container {        
+        gap: 4rem;
     }
 }
 

@@ -1,8 +1,7 @@
 .block__connection {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
     padding: 11rem  0 12rem 21.5%; 
     border-bottom: 1px solid var(--colorWhite);
 
@@ -33,10 +32,14 @@
     }
 
     &__button {
-
         &_btn {
             background-color: var(--colorBlueGray);
             color: var(--colorWhite);
+            transition: background-color .5s linear;
+        }
+
+        &_btn:hover {
+            background-color: var(--colorYaleBlue);
         }
     }
 }
@@ -46,6 +49,7 @@
         flex-wrap: wrap;
     }    
 }
+
 @media screen and (max-width: 593px) {
     .block__connection {
        
@@ -56,12 +60,10 @@
                 font-size: 4.5rem;
                 line-height: 5.75rem;
                 color: var(--colorWhite);
-                max-width: 30rem;
-                
-            }
-    
+                max-width: 30rem;                
+            }    
             &-text {
-                --widthTextFooter: 35rem;
+                --widthTextFooter: 30rem;
     
                 font-family: var(--fontFamilyGilroy);
                 font-size: 2rem;
@@ -69,7 +71,7 @@
                 color: var(--colorWhite);
                 opacity: .6;
                 max-width: var(--widthTextFooter);
-                width:var(--widthTextFooter);
+                width: var(--widthTextFooter);
             }
         }
     }

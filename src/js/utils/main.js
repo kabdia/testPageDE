@@ -10,7 +10,7 @@ isDomReady().then(() => {
     new ScrollLockManager();
     new ModalManager();
     new FormValidator();
-    new FormSendHandler();
+    new FormSendHandler();    
 });
 
 

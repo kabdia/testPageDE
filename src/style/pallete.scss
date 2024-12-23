@@ -7,10 +7,10 @@
     --colorLapisLazuli: #316099;  
     --colorRed: #EC0705;  
     --linearGradientHeader: linear-gradient(180deg, var(--colorWhite) 69%, var(--colorJordyBlue) 150%);
-
     --boxShadowForBtn: 5px 10px 20px 5px rgba(53, 110, 173, .2);
-
+    --shadowCardsInfoMain: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+    --shadowCardsInfoMainHover:5px 20px 60px 0px rgba(3, 27, 43, 0.5);
     --backgroundModal: rgba(33,37,41, .5);
     --borderInputModal: rgba(53, 110, 173, .4);
-    --placeholderInputModal:rgba(53, 110, 173, .2);
+    --placeholderInputModal:rgba(53, 110, 173, .2);    
 }
