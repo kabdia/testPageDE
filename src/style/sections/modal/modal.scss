@@ -11,24 +11,24 @@
     height: 100%;
     opacity: 0;
     transition: opacity 1s linear;
+    overflow: hidden;
 
     &__container {
         --widthForm: 67.5rem;
-        --heightForm: 100rem;
-        
+        --heightForm: 100vh;        
         
         max-width: var(--widthForm);
-        width: 100%;
+        width: 99%;
         max-height: var(--heightForm); 
         height: max-content; 
         background-color: var(--colorWhite);
         border-radius: 1.25rem;
-        padding: 2% 7rem;
+        padding: 5rem 7rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column; 
         position: relative;
-        
+        overflow-y: auto;
         
         &-close {
             cursor: pointer;
@@ -43,9 +43,10 @@
             flex-direction: column;
             flex-grow: 1; 
         }        
-    }
-
-    
+    } 
+    &__container::-webkit-scrollbar {
+        width: 0;
+    }   
 }
 
 .form {
@@ -97,7 +98,7 @@
         border-radius: 1.25rem;
         padding: 2.6rem 4.5rem;
         font-size: 2rem;
-        box-sizing: border-box;
+        box-sizing: border-box;        
         font-family: var(--fontFamilyGilroy);
         resize: none;        
     }
@@ -120,25 +121,28 @@
     }
 }
 .modal__info { 
-    display: flex;
+    display: flex;    
     visibility: hidden;  
     position: absolute;
-    top: 0;
+    top: 20%;
     left:0;
-    width: 100%;
-    height: 100%;
+    width: 100%;    
+    height: inherit;
+    padding:2rem;
     background-color: var(--colorWhite); 
-    border-radius: 1.25rem;
-    border: 1px solid var(--colorYaleBlue); 
+    border-radius: 1.25rem;    
+    box-shadow: var(--boxShadowForBtn);
     opacity: 0;
     transition: opacity .5s linear;
+    box-sizing: border-box;
     
     &_message {     
         padding: 3rem;
-        padding-top: 20%;        
+        padding-top: 10%;        
         font-size: 5rem;
         font-family: var(--fontFamilyGilroy);
-        text-align: center;        
+        text-align: center;      
+        color: var(--colorYaleBlue);  
     }
 }
 

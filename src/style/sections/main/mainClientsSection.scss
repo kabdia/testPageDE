@@ -70,14 +70,13 @@
         height: 100%;
         background-color: var(--colorYaleBlue);
         opacity: .2;
-        z-index: -1;
+        z-index: 0;       
     }
 }
 
 .logos_logo:hover {
     background-color: var(--colorYaleBlue);
-    opacity: 1;
-    
+    opacity: 1;    
 }
 
 @media screen and (max-width: 928px) {

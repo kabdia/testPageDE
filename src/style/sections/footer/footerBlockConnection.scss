@@ -14,8 +14,7 @@
             font-size: 4.5rem;
             line-height: 5.75rem;
             color: var(--colorWhite);
-            max-width: 40rem;
-            
+            max-width: 40rem;            
         }
 
         &-text {
@@ -51,8 +50,7 @@
 }
 
 @media screen and (max-width: 593px) {
-    .block__connection {
-       
+    .block__connection {       
         &_description {
            
             &-title {
@@ -63,7 +61,7 @@
                 max-width: 30rem;                
             }    
             &-text {
-                --widthTextFooter: 30rem;
+                --widthTextFooter: 28rem;
     
                 font-family: var(--fontFamilyGilroy);
                 font-size: 2rem;

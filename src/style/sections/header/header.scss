@@ -135,9 +135,10 @@ body {
 }
 
 @media screen and (max-width: 739px) {
+    
     .description {
         &__image_style {             
-            top: 500px;           
+            top: 60rem;           
         }
     }
 }
@@ -148,7 +149,7 @@ body {
     }
     .description {
         &__image_style {             
-            top: 60rem;           
+            top: 64rem;                   
         }
     }
     .description__prev {    
@@ -169,6 +170,15 @@ body {
             &_btn {
                 margin-top: -100px;
             }          
+        }
+    }
+}
+
+@media screen and (max-width: 386px) {
+    .description {
+        &__image_style {             
+            top: 73rem;    
+            right: 25%;       
         }
     }
 }
