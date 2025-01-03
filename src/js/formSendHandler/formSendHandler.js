@@ -7,7 +7,7 @@ export class FormSendHandler {
     attrs = {
       form: "data-js-form",
     };
-  
+      
     constructor() {
       if (FormSendHandler.instance) {        
         return FormSendHandler.instance;
