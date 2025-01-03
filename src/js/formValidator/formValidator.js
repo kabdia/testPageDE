@@ -49,15 +49,8 @@ export class FormValidator {
     }  
     
     validateForm() {
-      const inputs = this.form.querySelectorAll('input[data-js-required], textarea[data-js-required]');
-      let isValid = true;
-  
-      inputs.forEach((input) => {
-        if (!this.validateInput(input)) {
-          isValid = false;
-        }
-      });
-      
+      const inputs = this.form.querySelectorAll('input[data-js-required], textarea[data-js-required]');               
+      const isValid = [...inputs].some((input) => this.validateInput(input));     
       return isValid;
     }
 
@@ -69,7 +62,7 @@ export class FormValidator {
     switch (input.dataset.jsRequired) {
         case 'name': {
             if (input.value === '') {
-                errorMessage.innerHTML = 'This field is required.';
+                errorMessage.innerHTML = 'Поле обязательно для заполнения';
                 isValid = false;
             }  else {
                 errorMessage.innerHTML = '';
@@ -77,12 +70,12 @@ export class FormValidator {
         } break;
         case 'mail': {
             if (input.value === '') {                
-                errorMessage.innerHTML = 'This field is required.';
+                errorMessage.innerHTML = 'Поле обязательно для заполнения';
                 isValid = false;
             } else {
                 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
                 if (!emailRegex.test(input.value)) {
-                    errorMessage.textContent = 'Неверный формат email.';                    
+                    errorMessage.textContent = 'Неверный формат email';                    
                     isValid = false;
                   } else {
                     errorMessage.innerHTML = '';
@@ -91,7 +84,7 @@ export class FormValidator {
         } break;
         case 'message': {
             if (input.value === '') {
-                errorMessage.innerHTML = 'This field is required.';
+                errorMessage.innerHTML = 'Поле обязательно для заполнения';
                 isValid = false;
             } else {
                 errorMessage.innerHTML = '';
