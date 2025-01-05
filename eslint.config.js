@@ -11,7 +11,9 @@ export default [
         __dirname: 'readonly',
         "browser": true, 
         es2021: 'readonly',
-        "FormData": "readonly"
+        "FormData": "readonly",
+        "fetch": "readonly",
+        "alert": "readonly"
       },
     },
     ignores: ['dist/**', 'build/**', 'node_modules/**'],
