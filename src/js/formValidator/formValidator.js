@@ -1,7 +1,7 @@
 export class FormValidator {
     
     static instance = null;
-  
+
     constructor() {
       if (FormValidator.instance) {
         return FormValidator.instance; 
@@ -19,38 +19,27 @@ export class FormValidator {
       return FormValidator.instance;
     }
   
-    init(formSelector) {
-        
+    init(formSelector) {        
       this.form = document.querySelector(formSelector);        
       this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-      this.addEventListenersToFields();
+      this.form.addEventListener('input', (e) => this.listenFields(e));      
     }
   
-    addEventListenersToFields() {
-       
-      const inputs = this.form.querySelectorAll('input[data-js-required], textarea[data-js-required]');
-       
-      inputs.forEach((input) => {
-        const modes = input.getAttribute('data-js-required-mode')?.split(',') || [];
-        modes.forEach((mode) => {
-          if (mode === 'blur') {
-            input.addEventListener('blur', () => this.validateInput(input));
-          }
-          if (mode === 'change') {
-            input.addEventListener('change', () => this.validateInput(input));
-          }
-        });
-      });
+    listenFields(e) {
+      const input = e.target;
+      if (input.getAttribute('data-js-required')) {        
+        this.validateInput(input);
+      }     
     }
     
     handleSubmit() { 
-      const isValid = this.validateForm();  
+      const isValid = this.validateForm();    
       return isValid;
     }  
     
     validateForm() {
       const inputs = this.form.querySelectorAll('input[data-js-required], textarea[data-js-required]');               
-      const isValid = [...inputs].some((input) => this.validateInput(input));     
+      const isValid = [...inputs].some((input) => this.validateInput(input) === false);       
       return isValid;
     }
 
@@ -91,6 +80,17 @@ export class FormValidator {
             }                           
         } 
     } 
+    
     return isValid;  
+    }
+
+    blockStatusButton() {        
+      const button = document.querySelector('#submit');     
+      button.disabled = true;      
+    }
+
+    activeStatusButton() {
+      const button = document.querySelector('#submit');     
+      button.disabled = false;
     }
 }

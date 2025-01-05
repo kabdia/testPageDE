@@ -1,3 +1,4 @@
+import { FormValidator } from "../formValidator/formValidator";
 import { ScrollLockManager } from "../scrollLockManager/scrollLockManager";
 
 export class ModalManager {
@@ -45,6 +46,7 @@ export class ModalManager {
                 ModalManager.close({ mode: 'formBlock', datas: '#btnCloseModal' });
                 ModalManager.close({ mode: 'formBlock', datas: '#messageSuccess' });
                 ModalManager.close({ mode: 'formBlock', datas: '#btnCloseModalSuccess' });
+                FormValidator.getInstance().activeStatusButton();
             }
         });
     }

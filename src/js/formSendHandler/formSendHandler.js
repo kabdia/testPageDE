@@ -7,7 +7,7 @@ export class FormSendHandler {
     attrs = {
       form: "data-js-form",
     };
-      
+
     constructor() {
       if (FormSendHandler.instance) {        
         return FormSendHandler.instance;
@@ -83,7 +83,7 @@ export class FormSendHandler {
 
       if (obj.isNeedValidateBeforeSend) {        
         const resValidate = FormValidator.getInstance().validateForm(target);
-        if (!resValidate) {           
+        if (resValidate) {           
             return;                     
         }
       }
@@ -104,7 +104,8 @@ export class FormSendHandler {
               mode: 'sucessBlock', 
               datas: '#messageSuccess', 
               text: 'Сообщение успешно отправлено' 
-            });
+            });   
+            FormValidator.getInstance().blockStatusButton();         
           } else {
             throw new Error(`Данные не отправлены`);
           }    
@@ -115,6 +116,7 @@ export class FormSendHandler {
           datas: '#messageSuccess', 
           text: `Ошибка при отправке: ${error.message}`
         });
+        FormValidator.getInstance().blockStatusButton();
       });
     }    
 }

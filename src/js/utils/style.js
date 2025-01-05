@@ -1,16 +1,6 @@
-import '../../style/reset.scss';
-import '../../style/vars.scss';
-import '../../style/global.scss';
-import '../../style/pallete.scss';
-import '../../style/fonts.scss';
-import '../../style/elems/button/button.scss';
-import '../../style/elems/closer/closer.scss';
-import '../../style/sections/header/header.scss';
-import '../../style/sections/main/main.scss';
-import '../../style/sections/main/mainInfoSection.scss';
-import '../../style/sections/main/mainClientsSection.scss';
-import '../../style/sections/footer/footer.scss';
-import '../../style/sections/footer/footerBlockConnection.scss';
-import '../../style/sections/footer/footerBlockAbout.scss';
-import '../../style/sections/footer/footerCopyright.scss';
-import '../../style/sections/modal/modal.scss';
+const scssFiles = import.meta.glob('../../style/**/*.scss');
+
+for (const path in scssFiles) {
+    scssFiles[path]();
+}
+
