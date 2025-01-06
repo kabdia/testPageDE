@@ -46,6 +46,10 @@
 @media screen and (max-width: 1044px) {   
     .block__connection {
         flex-wrap: wrap;
+
+        &__button_btn {
+            margin-top: 20px;
+        }
     }    
 }
 
@@ -53,11 +57,9 @@
     .block__connection {       
         &_description {
            
-            &-title {
-                font-family: var(--fontFamilyGilroy);
-                font-size: 4.5rem;
-                line-height: 5.75rem;
-                color: var(--colorWhite);
+            &-title {              
+                font-size: 3rem;
+                line-height: 4rem;                
                 max-width: 30rem;                
             }    
             &-text {
@@ -70,7 +72,7 @@
                 opacity: .6;
                 max-width: var(--widthTextFooter);
                 width: var(--widthTextFooter);
-            }
-        }
+            }            
+        }       
     }
 }
