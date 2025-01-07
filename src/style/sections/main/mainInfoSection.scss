@@ -130,24 +130,27 @@
         &_title {
             font-size: 3.0rem;
             line-height: 4rem;
-        }
-    }   
-    .img-card2, .img-card3 {
+        }        
+    }  
+    .items__item {
+        padding: 3rem;
+    } 
+    .img-card1,.img-card2, .img-card3 {
         max-width: var(--widthCard);
         width: 100%;
-    }
-    .img-card3 {
+    }    
+    .img-card1,.img-card3 {
         margin-left: -2rem;
     }
     .items__item {
 
         &_title-style {
             font-size: 2.1rem;
-            line-height: 3rem
+            line-height: 3rem;            
         }
         &_text-style {
             font-size: 1.3rem;
-            line-height: 2.5rem;
+            line-height: 2.5rem;            
         }
     }
 }

@@ -158,7 +158,15 @@
 }
 
 @media screen and (max-width: 386px) {
+    .header {      
+    
+        &__menu {            
+            padding: 0 5rem;           
+        }
+    }
+    
     .description {
+        
         &__image_style {             
             top: 73rem;    
             right: 25%;       
