@@ -7,12 +7,13 @@
 .info__container {
     margin: 22.5rem 17.5%;    
     position: relative;
+    max-width: 115rem;
 
     &_title {
         --maxWidthTitle: 45rem;
 
         position: absolute;
-        top:0;
+        top: 0;
         left: -7rem;
         max-width: var(--maxWidthTitle);
         font-family: gilroy, sans-serif;
@@ -25,8 +26,7 @@
     &__items {
         --gapCards: 12.5rem;
 
-        display: flex;
-        max-width: 115rem;
+        display: flex;        
         justify-content: center;
         align-items: center;
         gap: var(--gapCards);
@@ -118,6 +118,14 @@
     margin-left: -6rem;
 }
 
+@media screen and (max-width: 1390px) {
+    .info__container {
+        
+        &_title {
+            left: 0rem;
+        }
+    }  
+}
 @media screen and (max-width: 1150px) {
     .info__container {
         &__items {
@@ -126,7 +134,7 @@
             transform: none;
         }
         &_title {
-            transform: translate(5rem);
+            left: 5rem;
         }
     }       
 }
