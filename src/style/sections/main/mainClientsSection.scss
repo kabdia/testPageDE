@@ -2,17 +2,23 @@
     width: 100%;    
     padding: 12rem 0 16rem 0;
     background-color: var(--colorBlueGray);    
-    border-top-left-radius: 25rem;
+    border-top-left-radius: 25rem;  
+    display: flex;
+    justify-content: center;  
 }
 
 .clients__container {
     margin: 0 17.5%;    
     display: flex;
     flex-direction: column;
-    gap: 15.4rem;
+    gap: 15.4rem;    
+    width: 100%; 
+    max-width: 115rem;  
+    
 
     &_description {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         gap: 12rem;
 

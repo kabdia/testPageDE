@@ -1,8 +1,16 @@
 .block__about {
     display: flex;
-    justify-content: space-between;
-    gap: 12.5rem;
-    padding: 12rem 0 0 21.5%;
+    justify-content: center;
+    align-items: center; 
+    padding: 12rem 0 0 26.5%;   
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        gap: 12.5rem;        
+        max-width: 115rem;
+        width: 100%;
+    }
 }
 
 .block__about__contacts {
@@ -127,9 +135,12 @@
     }    
 }
 
-@media screen and (max-width: 668px) {   
+@media screen and (max-width: 900px) {   
     .block__about {
-        flex-wrap: wrap;
+
+        &_container {
+            flex-wrap: wrap;
+        }        
     }
 }
 

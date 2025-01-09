@@ -1,5 +1,7 @@
 .main__info {
-    width: 100%;   
+    width: 100%; 
+    display: flex;
+    justify-content: center;  
 }
 
 .info__container {
@@ -11,7 +13,7 @@
 
         position: absolute;
         top:0;
-        left:0;
+        left: -7rem;
         max-width: var(--maxWidthTitle);
         font-family: gilroy, sans-serif;
         font-size: 4.5rem;
@@ -24,10 +26,11 @@
         --gapCards: 12.5rem;
 
         display: flex;
-        max-width: var(--maxWidthSection);
+        max-width: 115rem;
         justify-content: center;
         align-items: center;
         gap: var(--gapCards);
+        transform: translateX(6rem);
     }
 }
 
@@ -116,6 +119,10 @@
         &__items {
             flex-direction: column;
             padding-top: 25rem;
+            transform: none;
+        }
+        &_title {
+            transform: translate(5rem);
         }
     }       
 }

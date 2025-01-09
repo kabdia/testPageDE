@@ -1,13 +1,21 @@
 .block__connection {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
-    padding: 11rem  0 12rem 21.5%; 
+    justify-content:center;   
+    padding: 11rem  0 12rem 23.5%; 
     border-bottom: 1px solid var(--colorWhite);
-
+           
+    &_container {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        max-width: 115rem;
+        width: 100%;
+    }
     &_description {
         display: flex;        
-        flex-direction: column;            
+        flex-direction: column;   
+        justify-content: center;                 
 
         &-title {
             font-family: var(--fontFamilyGilroy);
@@ -45,7 +53,10 @@
 
 @media screen and (max-width: 1044px) {   
     .block__connection {
-        flex-wrap: wrap;
+
+        &_container {
+            flex-wrap: wrap;
+        }        
 
         &__button_btn {
             margin-top: 20px;
@@ -54,7 +65,8 @@
 }
 
 @media screen and (max-width: 593px) {
-    .block__connection {       
+    .block__connection {      
+        
         &_description {
            
             &-title {              

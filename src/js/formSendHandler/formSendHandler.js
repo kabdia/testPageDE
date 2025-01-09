@@ -27,6 +27,7 @@ export class FormSendHandler {
       document.addEventListener("submit", (e) => 
         {
           this.#handleSubmit(e);
+          FormValidator.getInstance().blockStatusButton();
         },
         true
       );
@@ -104,8 +105,7 @@ export class FormSendHandler {
               mode: 'sucessBlock', 
               datas: '#messageSuccess', 
               text: 'Сообщение успешно отправлено' 
-            });   
-            FormValidator.getInstance().blockStatusButton();         
+            });                    
           } else {
             throw new Error(`Данные не отправлены`);
           }    
@@ -115,8 +115,7 @@ export class FormSendHandler {
           mode: 'sucessBlock', 
           datas: '#messageSuccess', 
           text: `Ошибка при отправке: ${error.message}`
-        });
-        FormValidator.getInstance().blockStatusButton();
+        });        
       });
     }    
 }

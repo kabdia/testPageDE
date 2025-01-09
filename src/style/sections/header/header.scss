@@ -1,12 +1,13 @@
 .header {   
-    display: flex;
+    display: flex;    
     height: max-content;
     padding: 5rem 0 10rem;
     width: 100%;
     flex-direction: column;    
     background: var(--linearGradientHeader);  
     box-sizing: border-box;  
-    overflow-x: hidden;
+    overflow: hidden;
+
 
     &__menu {
         --heightMenu: 6rem;
@@ -25,10 +26,10 @@
 
     display: flex;   
     align-items:center;
-    justify-content: space-between; 
-    margin: 0 17.5%;   
+    justify-content: center;     
     box-sizing: border-box; 
-    padding-bottom: 20rem;
+    padding-bottom: 20rem;  
+    margin: 0 17.5%;  
 
     &__container {
         display: flex;
@@ -42,8 +43,7 @@
         flex-direction: column;       
         width: var(--widthTitlePrev);  
         z-index: 4;
-        transform: translateY(5rem);   
-         
+        transform: translateY(5rem);         
     }
 }
 
@@ -68,26 +68,34 @@
         margin-bottom: 8rem;
         opacity: 60%;
     }
-    &_btn {
+    &_link {
         background-color: var(--colorBlueGray);       
         box-shadow: var(--boxShadowForBtn);  
         transition: background-color .5s linear;  
         text-align: center;   
         line-height: var(--heightBtn);
     }
-    &_btn:hover {
+    &_link:hover {
         background-color: var(--colorLapisLazuli);
     }
 }
-
+.link-text {
+    font-family: var(--fontFamilyGilroy);
+    font-size: 2rem;
+    line-height: 3rem;    
+    text-align: center;    
+    color: var(--colorWhite);
+    text-decoration: none;
+}
 .description__image {
 
     position:relative;
-    width: 50%;
+    width: 50%;    
 
     &_style {         
         transform: scale(1.7) translate(5rem, 8rem);     
         width: 100%;
+        max-width: 53rem;
     }
 }
 
@@ -116,6 +124,7 @@
 
     .header__description__container {
         flex-wrap: wrap;
+        justify-content: center;
      }
     .description__image {        
         
@@ -131,9 +140,11 @@
         padding-bottom: 0rem;
 
         &__container {
-            margin-top: 5rem;
-            
+            margin-top: 5rem;        
         }   
+        &__prev {
+            width: 100%;
+        }
     }
     
     .description__prev {        
@@ -141,15 +152,16 @@
         &_title {
             font-size: 4.5rem;
             line-height: 6rem;
-            width: 70vw;            
+            width: 70vw;
+            
         }
         &_about {
             width: 70vw;
         }
     }
 
-    .description__image {        
-        width: 50%;        
+    .description__image {  
+        width: 100%;              
         
         &_style {
             transform: none;                    
