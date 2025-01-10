@@ -83,8 +83,12 @@
                 color: var(--colorWhite);
                 opacity: .6;
                 max-width: var(--widthTextFooter);
-                width: var(--widthTextFooter);
+                width: 100%;
             }            
         }       
+    }
+
+    .btn_style {
+        width: 25rem;
     }
 }

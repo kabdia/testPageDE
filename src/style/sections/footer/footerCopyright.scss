@@ -1,5 +1,13 @@
 .footer__copyright {
-    width: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: center;    
+
+    &_container {       
+        max-width: 115rem;
+        width: 100%;
+        padding-left: 23.5%;        
+    }
 
     &-style {
         font-family: var(--fontFamilyGilroy);
@@ -7,10 +15,11 @@
         line-height: 3.25rem;
         letter-spacing: 1px;
         color: var(--colorWhite);
-        opacity: .4;        
-        margin-left: 18%;
+        opacity: .4; 
+        
         margin-top: 5rem;
         margin-bottom: 0;
-        padding-bottom: 8rem;
+        padding-bottom: 8rem;       
     }
 }
+
